@@ -1,0 +1,25 @@
+{
+  "name": "@jneander/x-throwaway-vanilla-extract-ui",
+  "version": "1.0.0",
+  "description": "Example for debugging",
+  "license": "MIT",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "npm run clean && npm run build:esm && npm run build:cjs",
+    "build:cjs": "tsc -p tsconfig.build.cjs.json",
+    "build:esm": "tsc -p tsconfig.build.esm.json",
+    "clean": "rm -rf ./dist"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.1",
+    "typescript": "^4.9.3"
+  },
+  "peerDependencies": {
+    "@vanilla-extract/css": "^1.9.2",
+    "react": ">= 17.0.1"
+  }
+}
